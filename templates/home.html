@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is the home page</h1>
+<div>
+    <div>
+        Welcome {{request.user}}
+        <br/>
+        {{name}} : {{roll_num}}
+
+        My Friends:
+        <ul>
+            {% for item in friends %}
+                <li>{{forloop.counter}} -> {{ item }}</li>
+            {% endfor %}
+
+            {% if name == 'Venkat Shrikrishna' %}
+                blue blue blue
+            {% elif name == 'Krish venkat' %}
+                green green green
+            {% else %}
+                yellow yellow
+            {% endif %}
+        </ul>
+    </div>
+    <div>
+        Is Authenticated: {{request.user.is_authenticated}}
+    </div>
+</div>
+
+{% endblock %}

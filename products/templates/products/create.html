@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Default form from Django -->
+<!--<form method="post"> {% csrf_token %}-->
+<!--    {{ form.as_p }}-->
+<!--    <input type="submit" value="Save" />-->
+<!--</form>-->
+
+<form method="post"> {% csrf_token %}
+    <input type="input" name="title" placeholder="Your Product Title" />
+    <input type="submit" value="Save" />
+</form>
+{% endblock %}
